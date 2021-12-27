@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="style.css">
+  <!-- <script src="Content.js"></script> -->
+    
+</head>
+<body>
+    <div class="header-class">
+        <h1 id="h1">Web Watcher</h1>
+      </div>
+      <h2 id="h2-settings">Settings:</h2>
+      
+      <h3 id="h3-settings"><li>Enter websites to be blocked:</li></h3>
+    <input id="userinput" placeholder="Enter site name"> <button id="btn1" onclick="get()"> Submit </button>
+    <h3 id="message"> </h3>
+    <div id="blocked-sites">Current Blocked Sites:
+        <span style="color: #ff0100;">Youtube</span>
+        |
+        <span style="color: #0e8ef2;">Facebook</span>
+        |
+       <a href="#"><span style="color: #e50914;">Netflix</span></a> 
+      </span>
+    </div>
+</body>
+<script>
+     function get(){
+        let userinput=document.querySelector("#userinput");
+        let message=document.querySelector("#message");
+
+        
+        message.innerHTML="The webpage added is "+ userinput.value;
+
+        }
+</script>
+</html>

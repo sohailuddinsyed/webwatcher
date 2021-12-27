@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      
+    <div class="header-class">
+      <h1 id="h1">Web Watcher</h1>
+    </div>
+      <h2 id="h2a">Stop Procastinating <span style="color: black;">and </span>  <span style="color: green;">Start working</span></h2>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="settings.html">Settings</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      
+      
+       
+    </div>
+      <!-- <input id="userinput" placeholder="Enter site name"> <button id="btn1" onclick="get()"> Submit </button>
+      <h3 id="message"> </h3> -->
+     <!-- Current Blocked Sites:
+        <span style="color: #ff0100;">Youtube</span>
+        |
+        <span style="color: #0e8ef2;">Facebook</span>
+        |
+        <span style="color: #e50914;">Netflix</span>
+      </span> -->
+
+      <script>
+        function get(){
+        let userinput=document.querySelector("#userinput");
+        let message=document.querySelector("#message");
+
+        
+        message.innerHTML="The webpage added is "+ userinput.value;
+
+        }
+
+      </script>
+    
+  </body>
+</html>
