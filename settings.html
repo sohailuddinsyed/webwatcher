@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="settings.css">
+    
   <!-- <script src="Content.js"></script> -->
     
 </head>
@@ -15,7 +17,7 @@
       </div>
       <h2 id="h2-settings">Settings:</h2>
       
-      <h3 id="h3-settings"><li>Enter websites to be blocked:</li></h3>
+      <!-- <h3 id="h3-settings"><li>Enter websites to be blocked:</li></h3>
     <input id="userinput" placeholder="Enter site name"> <button id="btn1" onclick="get()"> Submit </button>
     <h3 id="message"> </h3>
     <div id="blocked-sites">Current Blocked Sites:
@@ -25,16 +27,36 @@
         |
        <a href="#"><span style="color: #e50914;">Netflix</span></a> 
       </span>
+    </div> -->
+    
+    <div id="container">
+      <div id="nameDiv"class="input">Sitename:<input id="site-name" type="text" placeholder="Eg: www,youtube.com"> 
+        <button id="entry">Add Website</button>
+      </div>  
     </div>
+
+    <table id="display">
+      <tr>
+        <th>Websites blocked:</th>
+      </tr>
+    </table>
+    
+
+
+
+
+
 </body>
-<script>
-     function get(){
-        let userinput=document.querySelector("#userinput");
-        let message=document.querySelector("#message");
+<script src="settings.js"></script>
+<script src="Content.js">
+  
+    //  function get(){
+    //     let userinput=document.querySelector("#userinput");
+    //     let message=document.querySelector("#message");
 
         
-        message.innerHTML="The webpage added is "+ userinput.value;
+    //     message.innerHTML="The webpage added is "+ userinput.value;
 
-        }
+    //     }
 </script>
 </html>

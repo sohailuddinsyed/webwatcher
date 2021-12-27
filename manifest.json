@@ -7,7 +7,7 @@
       "js": ["Content.js"]
     }
   ],
-  "icons": { "48": "images/icon48.png", "128": "images/icon128.png" },
+  "icons": { "48": "images/webwatcher-48.png", "128": "images/webwatcher-128.png" },
   "browser_action": {
     "default_popup": "Popup.html",
     "default_title": "Web Watcher"

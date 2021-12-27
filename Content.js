@@ -231,7 +231,36 @@ const generateSTYLES = () => {
    </style>`;
 };
 
-const generateHTML = (pageName) => {
+
+// var entry= document.getElementById("entry");
+// entry.addEventListener("click",displaySitenames);
+
+// var row=1;
+
+// function displaySitenames(){
+// var siteName=document.getElementById("site-name").value;
+
+  
+//     if(!siteName){
+//         alert("Enter Sitename:")
+//         return;
+//     }
+   
+//     var display=document.getElementById("display");
+    
+//     var newRow=display.insertRow(row);
+//     var cell1=newRow.insertCell(0);
+
+//     cell1.innerHTML=siteName;
+//     row++;
+
+//     // document.head.innerHTML = generateSTYLES();
+//     // document.body.innerHTML = generateHTML(siteName);
+    
+    
+// }
+
+const generateHTML = (site) => {
   return `
    
    <div id="clouds">
@@ -246,7 +275,7 @@ const generateHTML = (pageName) => {
       <div class='_404'>404</div>
       <hr>
       <div class='_1'>GET BACK TO WORK</div>
-      <div class='_2'>STUDYING > ${pageName}</div>
+      <div class='_2'>STUDYING > ${site}</div>
   </div>
    `;
 };
@@ -277,3 +306,4 @@ switch (window.location.hostname) {
     document.body.innerHTML = generateHTML("SPOTIFY");
     break;
 }
+
