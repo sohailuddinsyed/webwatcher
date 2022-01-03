@@ -7,9 +7,32 @@
     <title>Settings</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="settings.css">
-    
+    <script src="timeme.min.js"></script>
   <!-- <script src="Content.js"></script> -->
-    
+
+    <script type="text/javascript">
+    TimeMe.initialize({
+			currentPageName: "my-home-page", // current page
+			idleTimeoutInSeconds: 5,
+    });
+
+    window.onload = function () {
+      setInterval(function () {
+				let timeSpentOnPage = TimeMe.getTimeOnCurrentPageInSeconds();
+				document.getElementById('timeInSeconds').textContent = timeSpentOnPage.toFixed(2);
+
+				if (TimeMe.isUserCurrentlyOnPage && TimeMe.isUserCurrentlyIdle === false) {
+					document.getElementById('activityStatus').textContent = "You are actively using this page."
+				} else {
+					document.getElementById('activityStatus').textContent = "You have left the page."
+				}
+    }, 2);
+  }
+
+
+
+
+    </script>
 </head>
 <body>
     <div class="header-class">
@@ -41,6 +64,13 @@
       </tr>
     </table>
     
+    <div class="time-message">
+      <div id="nameDiv2"class="input">Screentime:</div>
+      <div>
+        <span id="timeInSeconds">0</span> <span style="font-size: large;">seconds</span>
+      </div>
+        <div id="activityStatus">You are actively using this page.</div></div> 
+    </div>
 
 
 
